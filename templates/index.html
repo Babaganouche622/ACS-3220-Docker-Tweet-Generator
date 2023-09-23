@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tweet Generator</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://wallpaperaccess.com/full/1360769.jpg");
+      background-size: cover;
+      font-size: 20px;
+      font-family: fantasy;
+    }
+
+    .box {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border: 1px solid red;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      margin-top: 20px
+    }
+
+    button {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      background-color: black;
+      color: red;
+      border: solid 2px red;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px red;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="refreshPage()">Play again</button>
+  <div class="box">
+    <blockquote>{{ phrase }}</blockquote>
+  </div>
+  <script>
+    function refreshPage() {
+      location.reload();
+    }
+  </script>
+</body>
+</html>
